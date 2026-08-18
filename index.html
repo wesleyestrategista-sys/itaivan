@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comunidade de Oportunidades — Itaivan Imobiliária</title>
+<meta name="description" content="Grupo exclusivo no WhatsApp da Itaivan com imóveis abaixo do valor de mercado, condições especiais e oportunidades em Jaraguá do Sul e região.">
+
+<!-- Open Graph: melhora a prévia do link no Meta Ads e no WhatsApp -->
+<meta property="og:title" content="Comunidade de Oportunidades — Itaivan">
+<meta property="og:description" content="Imóveis abaixo do valor de mercado e condições especiais, em primeira mão.">
+<meta property="og:type" content="website">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 92.707 111.715'%3E%3Cg transform='translate(467.3125,-237.871094) rotate(90)'%3E%3Cpath fill='%23BD1C2B' d='M 237.871094 467.3125 L 349.585938 467.3125 L 349.585938 455.074219 L 294.285156 448.40625 L 277.324219 416.382812 L 349.585938 416.382812 L 349.585938 411.609375 L 272.273438 412.261719 L 274.875 417.167969 L 252.113281 417.167969 L 262.289062 408.492188 L 278.148438 407.742188 L 295.3125 395.75 L 349.585938 391.515625 L 349.585938 374.605469 L 237.871094 374.605469 Z M 276.679688 420.5625 L 285.300781 436.871094 L 262.277344 434.253906 L 254.320312 420.394531 '/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Caveat:wght@500&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  /* Paleta extraída do brandbook Itaivan */
+  --vermelho:      #BD1C2B;
+  --vermelho-viv:  #E61D27;
+  --magenta:       #9F1759;
+  --cinza:         #E9E9E9;
+  --cinza-texto:   #6B6B6B;
+  --preto:         #1A1A1A;
+  --branco:        #FFFFFF;
+  --gradiente: linear-gradient(135deg, var(--magenta) 0%, var(--vermelho) 55%, var(--vermelho-viv) 100%);
+
+  --fonte: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+  /* Margueritas é a fonte de apoio oficial. Se você tiver o webfont
+     licenciado, adicione o @font-face e ela assume automaticamente. */
+  --fonte-apoio: 'Margueritas', 'Caveat', cursive;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--fonte);
+  font-weight:300;
+  color:var(--preto);
+  background:var(--branco);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+
+.wrap{width:100%;max-width:1080px;margin:0 auto;padding:0 28px}
+
+/* ---------- Topo ---------- */
+.topo{padding:30px 0 0}
+.lockup{display:flex;align-items:center;gap:16px}
+.simbolo{
+  width:auto;
+  height:56px;
+  color:var(--vermelho);
+  flex-shrink:0;
+}
+.lockup-txt{display:flex;flex-direction:column}
+.marca{
+  font-weight:700;
+  font-size:1.45rem;
+  letter-spacing:.14em;
+  line-height:1;
+  color:var(--vermelho);
+}
+.slogan{
+  font-family:var(--fonte-apoio);
+  font-size:1.3rem;
+  color:var(--magenta);
+  line-height:1;
+  margin-top:8px;
+}
+@media (max-width:760px){
+  .simbolo{height:46px}
+  .marca{font-size:1.2rem}
+  .slogan{font-size:1.1rem}
+}
+
+/* ---------- Hero ---------- */
+.hero{padding:64px 0 72px;position:relative}
+.faixa{
+  display:inline-block;
+  font-size:.72rem;
+  font-weight:500;
+  letter-spacing:.16em;
+  color:var(--vermelho);
+  padding-bottom:10px;
+  border-bottom:2px solid var(--vermelho);
+  margin-bottom:34px;
+}
+h1{
+  font-weight:300;
+  font-size:clamp(2.1rem, 6.2vw, 4.1rem);
+  line-height:1.08;
+  letter-spacing:-.02em;
+  max-width:19ch;
+}
+h1 strong{font-weight:700;color:var(--vermelho)}
+.hero p{
+  font-size:clamp(1rem, 2.4vw, 1.2rem);
+  color:var(--cinza-texto);
+  max-width:48ch;
+  margin-top:26px;
+}
+
+/* ---------- Botão ---------- */
+.acao{margin-top:40px;display:flex;flex-direction:column;gap:14px;align-items:flex-start}
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:12px;
+  background:var(--gradiente);
+  color:var(--branco);
+  text-decoration:none;
+  font-weight:700;
+  font-size:1.02rem;
+  padding:20px 38px;
+  border-radius:100px;
+  box-shadow:0 12px 30px -10px rgba(189,28,43,.55);
+  transition:transform .22s ease, box-shadow .22s ease;
+}
+.btn:hover,.btn:focus-visible{
+  transform:translateY(-3px);
+  box-shadow:0 18px 38px -10px rgba(189,28,43,.65);
+}
+.btn svg{width:22px;height:22px;flex-shrink:0;fill:currentColor}
+.gratis{font-size:.85rem;color:var(--cinza-texto)}
+
+/* ---------- Diagonal (elemento de assinatura) ---------- */
+.diagonal{
+  height:120px;
+  background:var(--gradiente);
+  clip-path:polygon(0 42%, 100% 0, 100% 100%, 0 100%);
+}
+
+/* ---------- O que você recebe ---------- */
+.beneficios{background:var(--cinza);padding:76px 0}
+.rotulo{
+  font-size:.72rem;
+  font-weight:500;
+  letter-spacing:.16em;
+  color:var(--vermelho);
+  margin-bottom:26px;
+}
+h2{
+  font-weight:300;
+  font-size:clamp(1.6rem,4vw,2.4rem);
+  line-height:1.18;
+  letter-spacing:-.015em;
+  max-width:26ch;
+}
+h2 strong{font-weight:700}
+.lista{
+  margin-top:48px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:2px;
+  background:rgba(0,0,0,.09);
+}
+.item{background:var(--cinza);padding:32px 26px 34px}
+.item h3{
+  font-weight:700;
+  font-size:1.02rem;
+  margin-bottom:10px;
+  color:var(--vermelho);
+}
+.item p{font-size:.94rem;color:#4F4F4F}
+
+/* ---------- Como funciona ---------- */
+.passos{padding:76px 0}
+.trilha{margin-top:44px;display:grid;gap:32px;grid-template-columns:repeat(auto-fit,minmax(210px,1fr))}
+.passo{border-top:2px solid var(--vermelho);padding-top:18px}
+.num{
+  font-weight:700;
+  font-size:.8rem;
+  color:var(--vermelho);
+  letter-spacing:.1em;
+  display:block;
+  margin-bottom:8px;
+}
+.passo p{font-size:.96rem;color:#4F4F4F}
+.passo p b{font-weight:700;color:var(--preto)}
+
+/* ---------- Fechamento ---------- */
+.fechamento{background:var(--gradiente);color:var(--branco);padding:82px 0}
+.fechamento .frase{
+  font-family:var(--fonte-apoio);
+  font-size:clamp(1.7rem,5vw,2.6rem);
+  line-height:1.15;
+  max-width:22ch;
+}
+.fechamento p{margin-top:20px;max-width:44ch;opacity:.92;font-size:1.02rem}
+.btn-claro{
+  margin-top:36px;
+  background:var(--branco);
+  color:var(--vermelho);
+  box-shadow:0 12px 30px -12px rgba(0,0,0,.4);
+}
+.btn-claro:hover,.btn-claro:focus-visible{box-shadow:0 18px 38px -12px rgba(0,0,0,.45)}
+
+/* ---------- Rodapé ---------- */
+footer{padding:44px 0 130px;font-size:.82rem;color:var(--cinza-texto)}
+.footer-marca{font-weight:700;letter-spacing:.12em;color:var(--vermelho);margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.simbolo-mini{height:26px;width:auto;color:var(--vermelho);flex-shrink:0}
+footer a{color:var(--vermelho);text-decoration:underline}
+footer p{max-width:62ch;margin-bottom:8px}
+
+/* ---------- Botão fixo no mobile ---------- */
+.fixo{
+  position:fixed;left:0;right:0;bottom:0;
+  padding:14px 20px calc(14px + env(safe-area-inset-bottom));
+  background:rgba(255,255,255,.94);
+  backdrop-filter:blur(10px);
+  border-top:1px solid rgba(0,0,0,.08);
+  display:none;
+  z-index:20;
+}
+.fixo .btn{width:100%;justify-content:center;padding:18px 24px}
+
+@media (max-width:760px){
+  .hero{padding:44px 0 56px}
+  .diagonal{height:80px}
+  .beneficios,.passos,.fechamento{padding:58px 0}
+  .fixo{display:block}
+  footer{padding-bottom:120px}
+  .acao{align-self:stretch}
+  .acao .btn{width:100%;justify-content:center;padding:19px 20px;font-size:.95rem;white-space:nowrap}
+  .gratis{align-self:center}
+}
+
+a:focus-visible{outline:3px solid var(--magenta);outline-offset:4px;border-radius:4px}
+
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important;animation:none!important}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<header class="topo">
+  <div class="wrap">
+    <div class="lockup">
+      <svg class="simbolo" viewBox="0 0 92.707 111.715" role="img" aria-label="Itaivan"><g transform="translate(467.3125,-237.871094) rotate(90)"><path fill-rule="nonzero" fill="currentColor" d="M 237.871094 467.3125 L 349.585938 467.3125 L 349.585938 455.074219 L 294.285156 448.40625 L 277.324219 416.382812 L 349.585938 416.382812 L 349.585938 411.609375 L 272.273438 412.261719 L 274.875 417.167969 L 252.113281 417.167969 L 262.289062 408.492188 L 278.148438 407.742188 L 295.3125 395.75 L 349.585938 391.515625 L 349.585938 374.605469 L 237.871094 374.605469 Z M 276.679688 420.5625 L 285.300781 436.871094 L 262.277344 434.253906 L 254.320312 420.394531 "/></g></svg>
+      <div class="lockup-txt">
+        <span class="marca">Itaivan</span>
+        <span class="slogan">Tradição que Transforma!</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="faixa">Comunidade de oportunidades</span>
+    <h1>As melhores oportunidades chegam <strong>primeiro aqui</strong>.</h1>
+    <p>Um grupo no WhatsApp onde a Itaivan compartilha, em primeira mão, imóveis abaixo do valor de mercado, condições especiais de aquisição e negociações que raramente chegam aos anúncios.</p>
+
+    <div class="acao">
+      <a class="btn" href="https://chat.whatsapp.com/CisR7p7PTqe74cShmVJp2j" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.24-.46-2.36-1.46-.87-.78-1.46-1.74-1.63-2.04-.17-.3-.02-.47.13-.62.15-.15.35-.4.5-.6.15-.2.2-.32.3-.52.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.5-.17 0-.37-.03-.57-.03s-.52.07-.8.37c-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.34 5.1 4.56 2.99 1.22 3.32 1.05 3.92.99.6-.05 1.94-.79 2.21-1.56.27-.77.27-1.42.2-1.56-.08-.15-.28-.22-.58-.37zM12 22a9.9 9.9 0 0 1-5.05-1.38L2 22l1.42-4.83A9.9 9.9 0 0 1 2 12 10 10 0 1 1 12 22z"/></svg>
+        Entrar no grupo do WhatsApp
+      </a>
+      <span class="gratis">Entrada gratuita &middot; Você sai quando quiser</span>
+    </div>
+  </div>
+</section>
+
+<div class="diagonal" role="presentation"></div>
+
+<section class="beneficios">
+  <div class="wrap">
+    <p class="rotulo">O que você recebe no grupo</p>
+    <h2>Oportunidades reais, <strong>com quem entende da região</strong>.</h2>
+
+    <div class="lista">
+      <div class="item">
+        <h3>Abaixo do valor de mercado</h3>
+        <p>Imóveis com preço fora do padrão praticado, por motivo de venda, permuta ou negociação direta com o proprietário.</p>
+      </div>
+      <div class="item">
+        <h3>Condições especiais</h3>
+        <p>Entradas facilitadas, parcelamento direto e possibilidades de negociação que não aparecem no anúncio.</p>
+      </div>
+      <div class="item">
+        <h3>Localizações e projetos exclusivos</h3>
+        <p>Endereços valorizados e lançamentos que chegam ao grupo antes de ir para o mercado.</p>
+      </div>
+      <div class="item">
+        <h3>Para morar ou investir</h3>
+        <p>Seja o seu primeiro imóvel ou mais um na carteira, você acompanha as oportunidades no seu tempo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="passos">
+  <div class="wrap">
+    <p class="rotulo">Como funciona</p>
+    <h2>São <strong>três passos</strong> até a sua próxima oportunidade.</h2>
+
+    <div class="trilha">
+      <div class="passo">
+        <span class="num">Passo 1</span>
+        <p><b>Você entra no grupo.</b> É só tocar no botão e confirmar a entrada no WhatsApp. Leva alguns segundos.</p>
+      </div>
+      <div class="passo">
+        <span class="num">Passo 2</span>
+        <p><b>Recebe as oportunidades.</b> Publicamos os imóveis com fotos, valores e condições. Só a Itaivan envia mensagens no grupo.</p>
+      </div>
+      <div class="passo">
+        <span class="num">Passo 3</span>
+        <p><b>Fala com um corretor.</b> Gostou de algum imóvel? Você chama no privado e um corretor da Itaivan acompanha você até a chave na mão.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="fechamento">
+  <div class="wrap">
+    <p class="frase">Encante-se por cada momento da vida</p>
+    <p>A casa própria, o primeiro investimento, o espaço para a família crescer. A gente acredita que cada conquista merece ser bem acompanhada.</p>
+    <a class="btn btn-claro" href="https://chat.whatsapp.com/CisR7p7PTqe74cShmVJp2j" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.24-.46-2.36-1.46-.87-.78-1.46-1.74-1.63-2.04-.17-.3-.02-.47.13-.62.15-.15.35-.4.5-.6.15-.2.2-.32.3-.52.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.5-.17 0-.37-.03-.57-.03s-.52.07-.8.37c-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.34 5.1 4.56 2.99 1.22 3.32 1.05 3.92.99.6-.05 1.94-.79 2.21-1.56.27-.77.27-1.42.2-1.56-.08-.15-.28-.22-.58-.37zM12 22a9.9 9.9 0 0 1-5.05-1.38L2 22l1.42-4.83A9.9 9.9 0 0 1 2 12 10 10 0 1 1 12 22z"/></svg>
+      Quero entrar no grupo
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p class="footer-marca"><svg class="simbolo-mini" viewBox="0 0 92.707 111.715" role="img" aria-label=""><g transform="translate(467.3125,-237.871094) rotate(90)"><path fill-rule="nonzero" fill="currentColor" d="M 237.871094 467.3125 L 349.585938 467.3125 L 349.585938 455.074219 L 294.285156 448.40625 L 277.324219 416.382812 L 349.585938 416.382812 L 349.585938 411.609375 L 272.273438 412.261719 L 274.875 417.167969 L 252.113281 417.167969 L 262.289062 408.492188 L 278.148438 407.742188 L 295.3125 395.75 L 349.585938 391.515625 L 349.585938 374.605469 L 237.871094 374.605469 Z M 276.679688 420.5625 L 285.300781 436.871094 L 262.277344 434.253906 L 254.320312 420.394531 "/></g></svg><span>Itaivan Imobiliária</span></p>
+    <p>Jaraguá do Sul e região &middot; Creci [inserir número] &middot; [endereço] &middot; [telefone]</p>
+    <p>As oportunidades divulgadas no grupo estão sujeitas à disponibilidade e à análise de crédito. Valores e condições podem mudar sem aviso prévio. Este grupo é um canal de divulgação da Itaivan e não constitui oferta de investimento com garantia de rentabilidade.</p>
+    <p>Ao entrar no grupo, seu número fica visível para a administração da Itaivan. <a href="/politica-de-privacidade">Política de privacidade</a></p>
+  </div>
+</footer>
+
+<div class="fixo">
+  <a class="btn" href="https://chat.whatsapp.com/CisR7p7PTqe74cShmVJp2j" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.24-.46-2.36-1.46-.87-.78-1.46-1.74-1.63-2.04-.17-.3-.02-.47.13-.62.15-.15.35-.4.5-.6.15-.2.2-.32.3-.52.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.5-.17 0-.37-.03-.57-.03s-.52.07-.8.37c-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.34 5.1 4.56 2.99 1.22 3.32 1.05 3.92.99.6-.05 1.94-.79 2.21-1.56.27-.77.27-1.42.2-1.56-.08-.15-.28-.22-.58-.37zM12 22a9.9 9.9 0 0 1-5.05-1.38L2 22l1.42-4.83A9.9 9.9 0 0 1 2 12 10 10 0 1 1 12 22z"/></svg>
+    Entrar no grupo
+  </a>
+</div>
+
+</body>
+</html>
